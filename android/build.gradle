@@ -31,14 +31,18 @@ dependencies {
 
     implementation 'com.facebook.react:react-native:+'
 
-    api 'com.aliyun.ams:alicloud-android-push:3.7.1'
-    api 'com.aliyun.ams:alicloud-android-third-push:3.7.0'
+    api('com.aliyun.ams:alicloud-android-push:3.7.1') {
+        exclude module: 'alicloud-android-utdid'
+    }
+    api('com.aliyun.ams:alicloud-android-third-push:3.7.0') {
+        exclude module: 'alicloud-android-utdid'
+    }
 
     // 华为依赖，从5.0.2版本开始不在提供离线包
     api 'com.aliyun.ams:alicloud-android-third-push-huawei:3.7.0'
 
-    // 魅族依赖
-    api 'com.aliyun.ams:alicloud-android-third-push-meizu:3.7.0'
+//    // 魅族依赖
+//    api 'com.aliyun.ams:alicloud-android-third-push-meizu:3.7.0'
 
     // 小米依赖
     api 'com.aliyun.ams:alicloud-android-third-push-xiaomi:3.7.0'
@@ -49,8 +53,8 @@ dependencies {
     // OPPO依赖
     api 'com.aliyun.ams:alicloud-android-third-push-oppo:3.7.0'
 
-    // 谷歌依赖
-    api 'com.aliyun.ams:alicloud-android-third-push-fcm:3.7.0'
+//    // 谷歌依赖
+//    api 'com.aliyun.ams:alicloud-android-third-push-fcm:3.7.0'
 
     // shortcutBadger
     // @link https://github.com/leolin310148/ShortcutBadger
