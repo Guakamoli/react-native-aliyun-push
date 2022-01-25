@@ -4,9 +4,12 @@
 
 [阿里云移动推送](https://www.aliyun.com/product/cps?spm=5176.2020520107.0.0.fgXGFp)react-native封装组件
 
-
 <details>
-  <summary>修改履历</summary> 
+  <summary>修改履历</summary>
+v1.0.23-utdid
+
+1. 解决 UTDID 冲突问题的版本
+
 v1.0.23
 
 1. 升级阿里云推送sdk android v3.7.1
@@ -65,6 +68,40 @@ react-native link react-native-aliyun-push
 ReactNative 0.60.x及以后
 ```
 yarn add react-native-aliyun-push
+```
+
+### UTDID 冲突的问题
+
+当前分支为剔除 utdid 的版本，需要手动集成一下
+
+#### iOS
+
+在 Podfile 中加上这个
+
+```pod
+def all_pods
+    # 其他pod
+    pod 'UTDID'
+end
+```
+
+#### android
+
+解压在控制台下载的SDK包，找到类似 `utdid4all-x.x.x.jar` 的包，拷贝到 `libs` 目录即可
+
+```java
+android {
+    // ...
+    repositories {
+        flatDir {
+            dirs 'libs' //this way we can find the .aar file in libs folder
+        }
+    }
+    dependencies {
+        // 其他aar
+        compile fileTree(include: ['*.jar'], dir: 'libs')
+    }
+}
 ```
 
 <details>
