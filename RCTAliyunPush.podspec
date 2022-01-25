@@ -8,7 +8,7 @@ Pod::Spec.new do |spec|
   spec.summary      = "A short description of RCTAliyunPush."
   spec.homepage     = "https://github.com/Guakamoli/react-native-aliyun-push"
   spec.license      = "MIT"
-  spec.author             = { "wwwlin" => "188658587@qq.com" }
+  spec.author             = { "longaotian" => "liangxian.feng@guakamoli.com" }
   spec.ios.deployment_target = "9.0"
   spec.tvos.deployment_target = "9.0"
   spec.source         = { :git => 'https://github.com/Guakamoli/react-native-aliyun-push.git', :tag => "v#{spec.version}"}
