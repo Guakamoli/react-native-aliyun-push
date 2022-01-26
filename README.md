@@ -6,6 +6,10 @@
 
 <details>
   <summary>修改履历</summary>
+v1.0.23-clean
+
+1. 安卓移除以下依赖包 `alicloud-android-third-push-fcm`, `com.aliyun.ams:alicloud-android-third-push-meizu`, `alicloud-android-utdid`
+
 v1.0.23-utdid
 
 1. 解决 UTDID 冲突问题的版本
