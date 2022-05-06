@@ -487,17 +487,16 @@ RCT_EXPORT_METHOD(getAuthorizationStatus:(RCTResponseSenderBlock)callback)
     // 通知打开回执上报
     [CloudPushSDK sendNotificationAck:userInfo];    
     
-    if ([content.body isEqualToString:@""]){
-        
-        // 通知不弹出
-        completionHandler(UNNotificationPresentationOptionNone);
-        
-    } else {
-    
-        // 通知弹出，且带有声音、内容和角标
-        completionHandler(UNNotificationPresentationOptionSound | UNNotificationPresentationOptionAlert | UNNotificationPresentationOptionBadge);
-        
-    }
+    DLog(@"userNotificationCenter content.body: %@", content.body);
+    completionHandler(UNNotificationPresentationOptionNone);
+
+    // if ([content.body isEqualToString:@""]){
+    //     // 通知不弹出
+    //     completionHandler(UNNotificationPresentationOptionNone);
+    // } else {
+    //     // 通知弹出，且带有声音、内容和角标
+    //     completionHandler(UNNotificationPresentationOptionSound | UNNotificationPresentationOptionAlert | UNNotificationPresentationOptionBadge);
+    // }
 }
 
 /**
