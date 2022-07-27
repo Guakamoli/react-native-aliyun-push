@@ -40,23 +40,23 @@ repositories {
 dependencies {
     implementation 'com.facebook.react:react-native:+'
 
-    api('com.aliyun.ams:alicloud-android-push:3.7.6')
+    api('com.aliyun.ams:alicloud-android-push:3.7.7')
 
-    api('com.aliyun.ams:alicloud-android-third-push:3.7.6')
+    api('com.aliyun.ams:alicloud-android-third-push:3.7.7')
 
     printf("aliyun build.gradle isGooglePlay：%s", isGooglePlay)
     if (!isGooglePlay) {
         // 华为依赖，从5.0.2版本开始不在提供离线包
-        api 'com.aliyun.ams:alicloud-android-third-push-huawei:3.7.6'
+        api 'com.aliyun.ams:alicloud-android-third-push-huawei:3.7.7'
         // 小米依赖
-        api 'com.aliyun.ams:alicloud-android-third-push-xiaomi:3.7.6'
+        api 'com.aliyun.ams:alicloud-android-third-push-xiaomi:3.7.7'
         // VIVO依赖
-        api 'com.aliyun.ams:alicloud-android-third-push-vivo:3.7.6'
+        api 'com.aliyun.ams:alicloud-android-third-push-vivo:3.7.7'
         // OPPO依赖
-        api 'com.aliyun.ams:alicloud-android-third-push-oppo:3.7.6'
+        api 'com.aliyun.ams:alicloud-android-third-push-oppo:3.7.7'
     }
     // 谷歌依赖
-    api('com.aliyun.ams:alicloud-android-third-push-fcm:3.7.6')
+    api('com.aliyun.ams:alicloud-android-third-push-fcm:3.7.7')
 
     // shortcutBadger
     // @link https://github.com/leolin310148/ShortcutBadger
